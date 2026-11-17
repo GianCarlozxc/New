@@ -4,7 +4,7 @@
 
 /**
  *
- * @author
+ * @author espin
  */
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -65,7 +65,7 @@ Enrollment(){
     withdraw.setBounds(425, 150, 180, 38);
     add(withdraw);
 
-    done = new JButton("Mark as Done");
+    done = new JButton("Mark as LOA");
     done.setBounds(425, 200, 180, 38);
     add(done);
 
@@ -93,7 +93,7 @@ Enrollment(){
                     String name = studentList.get(i);
                     area.append((i + 1) + ". " + name);
                     if(hashmap.get(name)){
-                        area.append(" (Done)");
+                        area.append(" (LOA)");
                     }
                     area.append("\n");
                 }
@@ -139,7 +139,7 @@ Enrollment(){
             else{
                 hashmap.put(name, true);
                 txt.setText("");
-                JOptionPane.showMessageDialog(this, "\"" + name + "\" has been marked as done.");
+                JOptionPane.showMessageDialog(this, "\"" + name + "\" has been marked as LOA.");
             }
         }
         area.setText("");
